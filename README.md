@@ -12,6 +12,7 @@ data engineering event tickets
 #Logical model
 ##############
 Check the snapshot (logicalmodel.jpeg)
+Check the snapshot (logicalmodel-withreferredfile.jpeg)
 
 ##############
 #Data model
