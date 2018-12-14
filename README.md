@@ -22,7 +22,7 @@ Check the snapshot (datamodel.jpeg)
 ################
 #Instructions for running and building the db and application
 ################
-1.      Execute the queries from backup.sql (or have splitted these tables individually like table_events.sql, table_seats.sql, table_user, table_user_seat.sql) for creating the tables – events, seats, userInformation, and user_seats_information.
+1.      Execute the queries in the storedprocedures (normalized to 3NF) from sp_allocate_seat.sql, sp_delete_seat.sql, sp_get_availableseats.sql, sp_get_bestticket.sql, sp_post_seat.sql, sp_update_events.sql, sp_update_user.sql (previously normalized to 2NF allocate_seat.sql, get_availableseats.sql, update_events.sql, and update_user.sql)
 2.      Execute the queries in the storedprocedures from allocate_seat.sql, get_availableseats.sql, update_events.sql, and update_user.sql
 3.      Run npm install from terminal or command prompt
 4.      Run the server.js script on terminal or command prompt, make sure the file has .js extension else rename it with the extension.
