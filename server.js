@@ -81,11 +81,37 @@ customer.post('/allocateSeat', (request, response) => {
 
 customer.get('/availableSeats', (request, response) => {
     console.log("call get_availableseats('"+request.query.username +"','"+request.query.password+"','"+request.query.eventname+"','"+request.query.location+"',@result, @seats);SELECT @result;select @seats;");
-    connection.query("SET @result = 'Success';SET @seats = 0;call get_availableseats('"+request.query.username +"','"+request.query.password+"','"+request.query.eventname+"','"+request.query.location+"',@result, @seats);SELECT @result;select @seats;", function (error, results) {
+    connection.query("SET @result = 'Success';call get_availableseats('"+request.query.username +"','"+request.query.password+"','"+request.query.eventname+"','"+request.query.location+"',@result);SELECT @result;", function (error, results) {
         if (error) throw error;
-        response.status(200).send(results[4]);
+        response.status(200).send(results[1][0]);
         response.end();
       });
 })
 
 
+seller.post('/PostNewSeat', (request, response) => {
+    console.log("call post_seat('"+request.query.username +"','"+request.query.password+"','"+request.body.eventname+"','"+request.body.location+"',"+request.body.rownumber+",@result, @seats)")
+    connection.query("SET @result = 'Success';call post_seat('"+request.query.username +"','"+request.query.password+"','"+request.body.eventname+"','"+request.body.location+"',"+request.body.rownumber+",@result);SELECT @result;", function (error, results) {
+        if (error) throw error;
+        response.status(200).send(results[2]);
+        response.end();
+      });
+})
+
+
+seller.delete('/DeleteSeat', (request, response) => {
+    connection.query("SET @result = 'Success';call delete_seat('"+request.query.username +"','"+request.query.password+"','"+request.body.eventname+"','"+request.body.location+"',"+request.body.rownumber+",@result);SELECT @result;", function (error, results) {
+        if (error) throw error;
+        response.status(200).send(results[2]);
+        response.end();
+      });
+})
+
+customer.get('/BestSeat', (request, response) => {
+    console.log("call best_seat('"+request.query.username +"','"+request.query.password+"','"+request.query.eventname+"','"+request.query.location+"',@result)")
+    connection.query("SET @result = 'Success';call best_seat('"+request.query.username +"','"+request.query.password+"','"+request.query.eventname+"','"+request.query.location+"',@result);SELECT @result;", function (error, results) {
+        if (error) throw error;
+        response.status(200).send(results[1][0]);
+        response.end();
+      });
+})
