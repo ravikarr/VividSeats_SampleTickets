@@ -11,7 +11,7 @@ data engineering event tickets
 ##############
 #Data model
 ##############
-
+Check the snapshot (datamodel.jpeg)
 
 
 ################
