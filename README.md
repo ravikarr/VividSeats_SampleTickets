@@ -27,7 +27,7 @@ Check the snapshot (datamodel.jpeg)
 2.      Execute the queries in the storedprocedures from allocate_seat.sql, get_availableseats.sql, update_events.sql, and update_user.sql
 3.      Run npm install from terminal or command prompt
 4.      Run the server.js script on terminal or command prompt, make sure the file has .js extension else rename it with the extension.
-5.      Run the APIs on Postman,
+5.      Run the APIs on Postman (make sure server.js is up and running),
 
 ##################
 #Examples
