@@ -113,16 +113,22 @@ STATUS:
 ]
 
 #######################
-#Tasks (pilot) tried implementing:
+#Additional examples
 #######################
-1.	Implemented datetime for eid (event) and store the purchase_time for customer
-2.	Allocating the total revenue for seller from the seats purchased by customers for an event
-3.	Designed tasks initially with seller, events, customers and seat_availability tables with 2Normalization-factor 
-4.	Implemented the referred-by option when customer is creating account and password.
+1. Post a new seat (see the snapshot postseat-seller.png)
+2. Delete a seat (see the snapshot deleteseat-seller.png)
+3. Get the best price for a seat for a event (see the snapshot getbestseat-customer.png)
+
+#######################
+#Tasks (pilot programs) tried implementing:
+#######################
+1.	Implement datetime for eid (event) and store the purchase_time for customer
+2.	Allocat the total revenue for seller from the seats purchased by customers for an event
+3.	Design tasks initially with seller, events, customers and seat_availability tables with 2Normalization-factor (note: normalized it to 3NF in the current model for scalability and robustness)
+4.	Implement the referred-by option when customer is creating account and password for sellers marketing startergy to be improved.
 
 #################
 #To do tasks:
 #################
-1.	Implement datetime for an event
-2.	List events for a given date range
-3.	Implementation  of Refered-by
+1.  List events for a given date range
+2.	List Refered-by option
