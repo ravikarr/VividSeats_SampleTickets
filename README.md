@@ -9,6 +9,11 @@ data engineering event tickets
 3.      Install postman latest version
 
 ##############
+#Logical model
+##############
+Check the snapshot (logicalmodel.jpeg)
+
+##############
 #Data model
 ##############
 Check the snapshot (datamodel.jpeg)
